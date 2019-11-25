@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+img { height: 100px; width: auto; }
+.bg-body{ background-color: #e6e6e6 !important; }
+.active-link { color: #17a2b8 !important; font-weight: bold; }
+.avatari { height: 48px; width: 48px; }
+.pointer { cursor: pointer !important; }
+.button:active, 
+ button:active,
+.button:focus, 
+ button:focus,
+.button:hover, 
+ button:hover{
+    border:none !important;
+    outline:none !important;
+}

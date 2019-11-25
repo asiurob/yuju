@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-light">
+  <a class="navbar-brand">
+    <img src="./assets/images/madketing.png" alt="madkting" style="height: 30px !important">
+  </a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link">
+        <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<mat-sidenav-container class="h-100 mt-1">
+  <mat-sidenav opened mode="side" class="col-sm-2 p-0">
+    <ul class="list-unstyled p-3">
+      <li *ngFor="let option of options">
+        <a [routerLink]="[ option.route ]" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
+          class="text-dark text-decoration-none mt-1">
+          <i [class]="'fas ' + option.icon"></i> {{ option.name }}
+        </a>
+      </li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="col-sm-10">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-loader></app-loader>

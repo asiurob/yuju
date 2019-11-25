@@ -1,0 +1,1 @@
+export const ROUTE = 'https://api.software.madkting.com/shops';
